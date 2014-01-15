@@ -1,13 +1,13 @@
-TitleScreen t1;
+Meter m1;
 
 void setup() {
-  size(displayWidth, displayHeight);
-  t1 = new TitleScreen("YAWK");
+  size(400, 400);
+  m1 = new Meter(30);
 }
 
 void draw() {
-  t1.run();
+  background(255);
+  m1.update();
+  println(m1.breathing);
 }
-
-
 
