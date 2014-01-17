@@ -1,7 +1,7 @@
 
 //Timer class
 class Timer {
-  int oldtime;
+  float oldtime;
 
   Timer() {
     oldtime = millis();
