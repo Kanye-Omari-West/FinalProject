@@ -1,8 +1,11 @@
 class Timer {
   int oldtime;
+  int score;
+
 
   Timer() {
     oldtime = millis();
+    score=0;
   } 
 
   float returnSeconds() {

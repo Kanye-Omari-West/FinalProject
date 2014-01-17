@@ -1,40 +1,25 @@
-class clothes {
-  PVector loc, vel, acc;
-  PImage image;
-  int choice;
+class catcher {
+  PImage kanye;
+  int y;
   int d;
+  int w,h;
 
-  clothes () {
-    d = 80;
-    choice = int(random(1,4));
-    loc = new PVector (random(1, width), 0);
-    vel = new PVector (0, 1);
-    acc = new PVector (0, 0.1);
-    if (choice == 1) {
-      image = loadImage ("shirt.jpg");
-    }
-    if (choice == 2) {
-      image = loadImage ("glasses.jpg");
-    }
-    if (choice == 3) {
-      image = loadImage ("pants.jpg");
-    }
-    if (choice == 4) {
-      image = loadImage ("shoes.jpg");
-    }
+  catcher() {
+    imageMode(CENTER);
+    kanye = loadImage ("kanye pixel underwear.jpg");
+    w=150;
+    h=250;
+    y= height-h/2;
   }
 
-  void display () { 
-    image(image, loc.x, loc.y, d, d);
- 
+  void display() {
+    image (kanye, mouseX, y,w,h);
   }
-  void move() {
-    vel.add(acc);
-    loc.add(vel);
-  }
-  void remove () {
-    loc.y = 2*height;
-    vel.set (0, 0);
+
+  void catchClothes (clothes fall, Timer t) {
+    if (dist(mouseX, y, fall.loc.x, fall.loc.y) < h/2 + fall.d/2) {
+      fall.remove();
+      t.score+=1;
+    }
   }
 }
-
