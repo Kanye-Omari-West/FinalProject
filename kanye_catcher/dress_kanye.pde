@@ -17,6 +17,7 @@ class dressKanye {
   }
 
   void run() {
+    fill(0);
     text("Score:" + time.score, 150, 100);
     undy.display();
     for (int i = 0; i<index; i++) {

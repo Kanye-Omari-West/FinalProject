@@ -11,16 +11,16 @@ class clothes {
     vel = new PVector (0, 1);
     acc = new PVector (0, 0.1);
     if (choice == 1) {
-      image = loadImage ("shirt.jpg");
+      image = loadImage ("shirt.png");
     }
     if (choice == 2) {
-      image = loadImage ("glasses.jpg");
+      image = loadImage ("glasses.png");
     }
     if (choice == 3) {
-      image = loadImage ("pants.jpg");
+      image = loadImage ("pants.png");
     }
     if (choice == 4) {
-      image = loadImage ("shoes.jpg");
+      image = loadImage ("shoes.png");
     }
   }
 
