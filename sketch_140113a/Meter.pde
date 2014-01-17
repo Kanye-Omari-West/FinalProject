@@ -1,6 +1,6 @@
 class Meter {
-  int goal;
-  int count;
+  float goal;
+  float count;
 
   boolean pressed;
   boolean unpressed;
@@ -11,7 +11,7 @@ class Meter {
 
   PImage kw1, kw2, kw3, kw4;
 
-  Meter(int x) {
+  Meter(float x) {
     goal = x;
     count = 0;
     position = 0;
@@ -27,7 +27,7 @@ class Meter {
     checkSpace();
     checkMouse();
     resetSpace();
-    display();
+//    display();
   }
 
   void checkSpace() {

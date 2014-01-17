@@ -1,16 +1,20 @@
-class ProgressBar{
+class ProgressBar {
   float h;
-  float w;
   float progress;
   color c;
-  
-  ProgressBar(float startHeight, Meter m1){
-      h = startHeight;
+  float goal;
+
+  ProgressBar(float startHeight, float g) {
+    h = startHeight;
+    goal = g;
   }
-  
-  void update(Meter m1){
-      w = m1.count;
-      
-      rect(0, h, w, (height-h));
+
+  void update(Meter m1) {
+    float w = (width/goal)*(m1.count);
+    fill(0);
+    rectMode(CENTER);
+    rect(width/2, h, w, 20);
+    println(w);
   }
 }
+
