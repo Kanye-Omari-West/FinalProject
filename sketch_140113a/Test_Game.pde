@@ -31,45 +31,6 @@ class TestGame {
     textSize(30);
     textAlign(CENTER);
     fill(255);
-    if (i == true) {
-      text("Help Kanye West with his Kanye Test!", width/2, height/2 - 350);
-    }
-    if (q1 == true || q2 == true || q3 == true || q4 == true || q5 == true || q6 == true || q7 == true || q8 == true || q9 == true || q10 == true || w == true) {
-      i = false;
-    } 
-    if (i == true || q2 == true || q3 == true || q4 == true || q5 == true || q6 == true || q7 == true || q8 == true || q9 == true || q10 == true || w == true) {
-      q1 = false;
-    }  
-    if (q1 == true || i == true || q3 == true || q4 == true || q5 == true || q6 == true || q7 == true || q8 == true || q9 == true || q10 == true || w == true) {
-      q2 = false;
-    }
-    if (q1 == true || q2 == true || i == true || q4 == true || q5 == true || q6 == true || q7 == true || q8 == true || q9 == true || q10 == true || w == true) {
-      q3 = false;
-    } 
-    if (q1 == true || q2 == true || q3 == true || i == true || q5 == true || q6 == true || q7 == true || q8 == true || q9 == true || q10 == true || w == true) {
-      q4 = false;
-    } 
-    if (q1 == true || q2 == true || q3 == true || q4 == true || i == true || q6 == true || q7 == true || q8 == true || q9 == true || q10 == true || w == true) {
-      q5 = false;
-    } 
-    if (q1 == true || q2 == true || q3 == true || q4 == true || q5 == true || i == true || q7 == true || q8 == true || q9 == true || q10 == true || w == true) {
-      q6 = false;
-    } 
-    if (q1 == true || q2 == true || q3 == true || q4 == true || q5 == true || q6 == true || i == true || q8 == true || q9 == true || q10 == true || w == true) {
-      q7 = false;
-    }
-    if (q1 == true || q2 == true || q3 == true || q4 == true || q5 == true || q6 == true || q7 == true || i == true || q9 == true || q10 == true || w == true) {
-      q8 = false;
-    } 
-    if (q1 == true || q2 == true || q3 == true || q4 == true || q5 == true || q6 == true || q7 == true || q8 == true || i == true || q10 == true || w == true) {
-      q9 = false;
-    }
-    if (q1 == true || q2 == true || q3 == true || q4 == true || q5 == true || q6 == true || q7 == true || q8 == true || q9 == true || i == true || w == true) {
-      q10 = false;
-    }
-    if (q1 == true || q2 == true || q3 == true || q4 == true || q5 == true || q6 == true || q7 == true || q8 == true || q9 == true || q10 == true || i == true) {
-      w = false;
-    }
   }
 
   void Questions() {
@@ -148,9 +109,51 @@ class TestGame {
     if (w == true) {
       text("CONGRATULATIONS! You passed!", width/2, height/2 - 350);
     }
+    //After w = true, the next game should start
   }
 
   void Update() {
+    if (i == true) {
+      text("Help Kanye West with his Kanye Test!", width/2, height/2 - 350);
+    }
+    if (q1 == true || q2 == true || q3 == true || q4 == true || q5 == true || q6 == true || q7 == true || q8 == true || q9 == true || q10 == true || w == true) {
+      i = false;
+    } 
+    if (i == true || q2 == true || q3 == true || q4 == true || q5 == true || q6 == true || q7 == true || q8 == true || q9 == true || q10 == true || w == true) {
+      q1 = false;
+    }  
+    if (q1 == true || i == true || q3 == true || q4 == true || q5 == true || q6 == true || q7 == true || q8 == true || q9 == true || q10 == true || w == true) {
+      q2 = false;
+    }
+    if (q1 == true || q2 == true || i == true || q4 == true || q5 == true || q6 == true || q7 == true || q8 == true || q9 == true || q10 == true || w == true) {
+      q3 = false;
+    } 
+    if (q1 == true || q2 == true || q3 == true || i == true || q5 == true || q6 == true || q7 == true || q8 == true || q9 == true || q10 == true || w == true) {
+      q4 = false;
+    } 
+    if (q1 == true || q2 == true || q3 == true || q4 == true || i == true || q6 == true || q7 == true || q8 == true || q9 == true || q10 == true || w == true) {
+      q5 = false;
+    } 
+    if (q1 == true || q2 == true || q3 == true || q4 == true || q5 == true || i == true || q7 == true || q8 == true || q9 == true || q10 == true || w == true) {
+      q6 = false;
+    } 
+    if (q1 == true || q2 == true || q3 == true || q4 == true || q5 == true || q6 == true || i == true || q8 == true || q9 == true || q10 == true || w == true) {
+      q7 = false;
+    }
+    if (q1 == true || q2 == true || q3 == true || q4 == true || q5 == true || q6 == true || q7 == true || i == true || q9 == true || q10 == true || w == true) {
+      q8 = false;
+    } 
+    if (q1 == true || q2 == true || q3 == true || q4 == true || q5 == true || q6 == true || q7 == true || q8 == true || i == true || q10 == true || w == true) {
+      q9 = false;
+    }
+    if (q1 == true || q2 == true || q3 == true || q4 == true || q5 == true || q6 == true || q7 == true || q8 == true || q9 == true || i == true || w == true) {
+      q10 = false;
+    }
+    if (q1 == true || q2 == true || q3 == true || q4 == true || q5 == true || q6 == true || q7 == true || q8 == true || q9 == true || q10 == true || i == true) {
+      w = false;
+    }
+    //This assures that no two texts appear at the same time
+    
     if (i == true && mousePressed && mouseX > width/2 - 350 && mouseX < width/2 + 350 && mouseY < height/2 - 300 && mouseY > height/2 - 400) {
       q1 = true;
     }
@@ -184,6 +187,7 @@ class TestGame {
     if (q10 == true && mousePressed && mouseY > height/2 - 125 && mouseY < height/2 + 225) {
       w = true;
     }
+    //These if statements shift through each question after it is answered correctly
   }
 }
 
