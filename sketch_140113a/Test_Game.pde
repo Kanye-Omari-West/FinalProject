@@ -80,7 +80,7 @@ class TestGame {
       text("Jay-Z", width/2, height/2 - 100);
       text("Beyonce", width/2, height/2);
       text("Taylor Swift", width/2, height/2 + 100);
-      text("Name", width/2, height/2 + 200);
+      text("Ms. Arnold", width/2, height/2 + 200);
     }
     if (q2 == true) {
       text("Which is one of Kanye's recent nicknames?", width/2, height/2 - 350);
@@ -98,7 +98,7 @@ class TestGame {
     }
     if (q4 == true) {
       text("Who does not have the answers?", width/2, height/2 - 350);
-      text("", width/2, height/2 - 100);
+      text("You", width/2, height/2 - 100);
       text("Sway", width/2, height/2);
       text("Chris Martin", width/2, height/2 + 100);
       text("Sanservino", width/2, height/2 + 200);
@@ -132,11 +132,11 @@ class TestGame {
       text("An elephant", width/2, height/2 + 200);
     }
     if (q9 == true) {
-      text("", width/2, height/2 - 350);
-      text("A rapper", width/2, height/2 - 100);
-      text("Beyonce", width/2, height/2);
-      text("Taylor Swift", width/2, height/2 + 100);
-      text("Name", width/2, height/2 + 200);
+      text("What was Kanye's debut album?", width/2, height/2 - 350);
+      text("Nothing Was the Same", width/2, height/2 - 100);
+      text("Yeezus", width/2, height/2);
+      text("The College Dropout", width/2, height/2 + 100);
+      text("Late Registration", width/2, height/2 + 200);
     }
     if (q10 == true) {
       text("Who is the modern day Leonardo Da Vinci?", width/2, height/2 - 350);
@@ -144,6 +144,9 @@ class TestGame {
       text("Kanye", width/2, height/2);
       text("Kanye", width/2, height/2 + 100);
       text("Kanye", width/2, height/2 + 200);
+    }
+    if (w == true) {
+      text("CONGRATULATIONS! You passed!", width/2, height/2 - 350);
     }
   }
 
@@ -178,7 +181,7 @@ class TestGame {
     if (q9 == true && mousePressed && mouseY > height/2 + 75 && mouseY < height/2 + 125) {
       q10 = true;
     }
-    if (q10 == true && mousePressed) {
+    if (q10 == true && mousePressed && mouseY > height/2 - 125 && mouseY < height/2 + 225) {
       w = true;
     }
   }
