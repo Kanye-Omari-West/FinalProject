@@ -24,5 +24,6 @@ class Instructions {
     textSize(60);
     text("BACK", width/2, height - 80);
   }
+  // This is shown whenever conditions to lose a game are met. Try again leads back to the original intro (see Intro Class).
 }
 

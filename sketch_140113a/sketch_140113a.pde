@@ -3,10 +3,12 @@ ProgressBar p1;
 Intro i;
 GameOver g;
 Instructions in;
+TestGame t;
 float GOAL = 30;
 
 void setup() {
   size(displayWidth, displayHeight);
+  t = new TestGame();
   in = new Instructions();
   i = new Intro();
   g = new GameOver();
@@ -17,6 +19,8 @@ void setup() {
 void draw() {
   //  m1.update();
   //  p1.update(m1);
-  in.Display();
+  t.Display();
+  t.Questions();
+  t.Update();
 }
 

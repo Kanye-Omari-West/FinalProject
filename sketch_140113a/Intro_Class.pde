@@ -43,6 +43,8 @@ class Intro {
     fill(168, 163, 12);
     text("Start", 325, height/2 - 140);
     text("Instructions", width - 325, height/2 - 140);
+    //If the Start button is pressed, then the first game should begin.
+    //If the Instructions button is pressed, then the Instructions Class should be displayed.
   }
 
   void Albums() {
