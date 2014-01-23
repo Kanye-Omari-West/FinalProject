@@ -11,4 +11,6 @@ class Swatter {
     image(swatter, mouseX, mouseY, 150, 150);
     imageMode(CORNER);
   }
+  
+  
 }
