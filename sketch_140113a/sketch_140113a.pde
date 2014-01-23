@@ -9,7 +9,9 @@ void setup() {
 }
 
 void draw() {
+  background(255);
   m1.update();
   p1.update(m1);
+  println(m1.position);
 }
 

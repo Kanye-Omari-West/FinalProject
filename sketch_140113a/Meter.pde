@@ -27,7 +27,7 @@ class Meter {
     checkSpace();
     checkMouse();
     resetSpace();
-//    display();
+    display();
   }
 
   void checkSpace() {
@@ -55,9 +55,6 @@ class Meter {
   void checkMouse() {
     breathing = mousePressed;
     if (breathing) {
-      position = 3;
-    }
-    else if (size >= 20) {
       position = 2;
     }
   }
@@ -72,9 +69,6 @@ class Meter {
 
     switch (position) {
 
-    case 3:
-      image(kw4, 0, 0, width, height);
-      break;
     case 2:
       image(kw3, 0, 0, width, height);
       break;
