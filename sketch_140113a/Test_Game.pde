@@ -1,9 +1,11 @@
 class TestGame {
 
+  GameOver g;
   PImage Classroom;
-  boolean q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, w, i;
+  boolean q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, w, i, l;
 
   TestGame() {
+    g = new GameOver();
     Classroom = loadImage("School Desk.jpg");
     i = true;
     q1 = false; 
@@ -17,6 +19,7 @@ class TestGame {
     q9 = false;
     q10 = false;
     w = false;
+    l = false;
   }
 
   void Display() {
@@ -112,7 +115,7 @@ class TestGame {
     //After w = true, the next game should start
   }
 
-  void Update() {
+  void Advance() {
     if (i == true) {
       text("Help Kanye West with his Kanye Test!", width/2, height/2 - 350);
     }
@@ -153,8 +156,8 @@ class TestGame {
       w = false;
     }
     //This assures that no two texts appear at the same time
-    
-    if (i == true && mousePressed && mouseX > width/2 - 350 && mouseX < width/2 + 350 && mouseY < height/2 - 300 && mouseY > height/2 - 400) {
+
+      if (i == true && mousePressed && mouseX > width/2 - 350 && mouseX < width/2 + 350 && mouseY < height/2 - 300 && mouseY > height/2 - 400) {
       q1 = true;
     }
     if (q1 == true && mousePressed && mouseY > height/2 + 75 && mouseY < height/2 + 125) {
@@ -188,6 +191,18 @@ class TestGame {
       w = true;
     }
     //These if statements shift through each question after it is answered correctly
+  }
+
+  void Lose() {
+    if (l == true) {
+      g.Display();
+    }
+    //This leads to the Game Over screen.
+    
+    if (q1 == true && mousePressed && mouseY > height/2 + 175 && mouseY < height/2 + 225) {
+      l = true;
+    }
+    if (q1 == true && 
   }
 }
 

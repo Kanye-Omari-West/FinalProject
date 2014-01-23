@@ -41,8 +41,9 @@ class Intro {
       image(Bear2, 100, height/2, 150, 200);
       fill(128, 14, 42);
       strokeWeight(5);
-      rect(200, height/2 - 200, 250, 100);
-      rect(width - 450, height/2 - 200, 250, 100);
+      rectMode(CENTER);
+      rect(325, height/2 - 150, 250, 100);
+      rect(width - 325, height/2 - 150, 250, 100);
       textSize(40);
       fill(168, 163, 12);
       text("Start", 325, height/2 - 140);
@@ -94,7 +95,7 @@ class Intro {
     if (in == true) {
       background(35, 16, 54);
       imageMode(CENTER);
-      image(KI, width/2, height/2 - 300, 500, 400);
+      image(KI, width/2, height/2 - 200, 400, 300);
       fill(128, 14, 42);
       rectMode(CENTER);
       strokeWeight(5);
