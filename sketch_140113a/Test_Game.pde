@@ -199,10 +199,10 @@ class TestGame {
     }
     //This leads to the Game Over screen.
     
-    if (q1 == true && mousePressed && mouseY > height/2 + 175 && mouseY < height/2 + 225) {
-      l = true;
-    }
-    if (q1 == true && 
+//    if (q1 == true && mousePressed && mouseY > height/2 + 175 && mouseY < height/2 + 225) {
+//      l = true;
+//    }
+//    if (q1 == true && 
   }
 }
 

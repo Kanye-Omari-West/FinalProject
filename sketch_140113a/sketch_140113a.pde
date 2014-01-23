@@ -17,9 +17,8 @@ void setup() {
 void draw() {
   //  m1.update();
   //  p1.update(m1);
-  t.Display();
-  t.Questions();
-  t.Advance();
-  t.Lose();
+  i.Display();
+  i.Albums();
+  i.Instructions();
 }
 
