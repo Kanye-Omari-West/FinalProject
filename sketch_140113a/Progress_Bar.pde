@@ -1,4 +1,5 @@
 class ProgressBar {
+  
   float h;
   float progress;
   color c;
