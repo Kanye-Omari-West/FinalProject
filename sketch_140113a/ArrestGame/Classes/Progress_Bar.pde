@@ -1,5 +1,5 @@
 class ProgressBar {
-  
+
   float h;
   float progress;
   color c;
@@ -10,12 +10,11 @@ class ProgressBar {
     goal = g;
   }
 
-  void update(Meter m1) {
+  void go(Meter m1) {
     float w = (width/goal)*(m1.count);
-    fill(0);
+    fill(0, 255, 0);
     rectMode(CENTER);
-    rect(width/2, h, w, 20);
-    println(w);
+    rect(width/2, h-40, w, 20);
   }
 }
 
