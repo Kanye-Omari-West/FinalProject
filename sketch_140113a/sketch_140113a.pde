@@ -15,10 +15,6 @@ void setup() {
 }
 
 void draw() {
-  //  m1.update();
-  //  p1.update(m1);
-  i.Display();
-  i.Albums();
-  i.Instructions();
+  t.run();
 }
 

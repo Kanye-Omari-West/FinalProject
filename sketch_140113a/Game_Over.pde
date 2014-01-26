@@ -14,7 +14,7 @@ class GameOver {
   }
 
   void Display() {
-    if t == false () {
+    if (t == false) {
       background(35, 16, 54);
       imageMode(CENTER);
       image(KS, width/2, height/2 + 200, 1000, 500);
@@ -31,7 +31,6 @@ class GameOver {
       textSize(40);
       rectMode(CENTER);
       text("Try Again? ->", loc.x, height/2 - 150);
-      ellipse(
     }
   }
 }
