@@ -18,8 +18,7 @@ class dressKanye {
 
   void run() {
     fill(0);
-    textSize(100);
-    text("Score:" + time.score, 120, 100);
+    text("Score:" + time.score, 150, 100);
     undy.display();
     for (int i = 0; i<index; i++) {
       clo[i].display();
