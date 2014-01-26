@@ -1,5 +1,5 @@
-class dressKanye {
-  
+class dressKanye extends Game {
+
   clothes[] clo = new clothes[200];
   Timer time;
   int oldTime;
@@ -18,9 +18,10 @@ class dressKanye {
   }
 
   void run() {
+    
     fill(0);
     textSize(100);
-    text("Score:" + time.score, 120, 100);
+    text("Score:" + score, 120, 100);
     undy.display();
     for (int i = 0; i<index; i++) {
       clo[i].display();

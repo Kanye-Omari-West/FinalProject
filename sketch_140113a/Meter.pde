@@ -60,10 +60,7 @@ class Meter {
   void checkMouse() {
     breathing = mousePressed;
     if (breathing) {
-<<<<<<< HEAD:sketch_140113a/Meter.pde
-=======
       goal -= 1; 
->>>>>>> sehmon:sketch_140113a/ArrestGame/Classes/Meter.pde
       position = 2;
     }
     else {

@@ -1,4 +1,4 @@
-class ArrestGame {
+class ArrestGame extends Game {
   Meter m1;
   ProgressBar p1;
   Timer t1;

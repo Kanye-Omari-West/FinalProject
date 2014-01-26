@@ -1,4 +1,4 @@
-class PestGame {
+class PestGame extends Game {
 
   ArrayList<Pest> pests;
   Swatter s1;
@@ -13,6 +13,7 @@ class PestGame {
   }
 
   void run() {
+    checkPests();
     for (int i = 0; i < pests.size(); i++) {
       Pest p = pests.get(i);
       p.update();
@@ -20,13 +21,19 @@ class PestGame {
       p.updateOver();
     }
     s1.display();
+
+    if (pests.size() == 0) {
+      gameWon = true;
+    }
   }
 
   void checkPests() {
-    for (int i = 0; i < p1.pests.size(); i++) {
-      Pest p = p1.pests.get(i);
-      if (p.mouseOver) {
-        p1.pests.remove(p);
+    if (mousePressed) {
+      for (int i = 0; i < pests.size(); i++) {
+        Pest p = pests.get(i);
+        if (p.mouseOver) {
+          pests.remove(p);
+        }
       }
     }
   }

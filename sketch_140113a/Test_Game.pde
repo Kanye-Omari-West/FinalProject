@@ -1,11 +1,11 @@
-class TestGame {
+class TestGame extends Game {
 
   GameOver g;
   PImage Classroom;
   boolean q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, w, i, l;
 
   TestGame() {
-    g = new GameOver();
+
     Classroom = loadImage("School Desk.jpg");
     i = true;
     q1 = false; 
@@ -22,6 +22,11 @@ class TestGame {
     l = false;
   }
 
+  void run() {
+    Display();
+    Questions();
+    Advance();
+  }
   void Display() {
     image(Classroom, 0, 0, displayWidth, displayHeight);
     rectMode(CENTER);
@@ -111,6 +116,7 @@ class TestGame {
     }
     if (w == true) {
       text("CONGRATULATIONS! You passed!", width/2, height/6);
+      gameWon = true;
     }
     //After w = true, the next game should start
   }
@@ -193,16 +199,15 @@ class TestGame {
     //These if statements shift through each question after it is answered correctly
   }
 
-  void Lose() {
-    if (l == true) {
-      g.Display();
-    }
-    //This leads to the Game Over screen.
-    
-//    if (q1 == true && mousePressed && mouseY > 3*height/6 + 175 && mouseY < 3*height/6 + 225) {
-//      l = true;
-//    }
-//    if (q1 == true && 
-  }
+
+  //This leads to the Game Over screen.
+
+  //    if (q1 == true && mousePressed && mouseY > 3*height/6 + 175 && mouseY < 3*height/6 + 225) {
+  //      l = true;
+  //    }
+  //    if (q1 == true &&
 }
+
+
+//    if (q1 == true &&
 
