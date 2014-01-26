@@ -5,11 +5,12 @@ class Meter {
   boolean pressed;
   boolean unpressed;
   boolean breathing;
+  boolean goalMet;
 
   int position;
   float size;
 
-  PImage kw1, kw2, kw3, kw4;
+  PImage kw1, kw2, kw3;
 
   Meter(float x) {
     goal = x;
@@ -17,15 +18,19 @@ class Meter {
     position = 0;
     size = 10;
 
-    kw1 = loadImage("kanye_cpr1.png");
-    kw2 = loadImage("kanye_cpr2.png");
-    kw3 = loadImage("kanye_cpr3.png");
-    kw4 = loadImage("kanye_cpr4.png");
+    kw1 = loadImage("kw1.jpg");
+    kw2 = loadImage("kw2.jpg");
+    kw3 = loadImage("kw3.jpg");
   }
 
   void update() {
-    checkSpace();
-    checkMouse();
+    if (goalMet) {
+      checkMouse();
+    }
+    else {
+      checkSpace();
+    }
+    spaceGoalReached();
     resetSpace();
     display();
   }
@@ -55,28 +60,43 @@ class Meter {
   void checkMouse() {
     breathing = mousePressed;
     if (breathing) {
+<<<<<<< HEAD:sketch_140113a/Meter.pde
+=======
+      goal -= 1; 
+>>>>>>> sehmon:sketch_140113a/ArrestGame/Classes/Meter.pde
       position = 2;
+    }
+    else {
+      position = 0;
     }
   }
 
-  boolean spaceGoalReached() {
-    return (goal == count);
+
+
+  void spaceGoalReached() {
+    if (count == goal) {
+      goalMet = true;
+    }
+    else if (count == 0) {
+      goalMet = false;
+    }
   }
 
   void display() {
+    println(count);
     fill(0);
     noStroke();
 
     switch (position) {
 
     case 2:
-      image(kw3, 0, 0, width, height);
+      image(kw1, 0, 0, width, height);
       break;
     case 1:  
       image(kw2, 0, 0, width, height);
       break;
     case 0: 
-      image(kw1, 0, 0, width, height);
+      image(kw3, 0, 0, width, height);
       break;
     }
   }
