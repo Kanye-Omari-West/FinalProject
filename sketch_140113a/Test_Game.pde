@@ -169,45 +169,33 @@ class TestGame extends Game {
     if (q1 == true && mousePressed && mouseY > 4*height/6 + - 50 && mouseY < 4*height/6 + 50) {
       q2 = true;
     }
-    if (q2 == true && mousePressed && mouseY > 3*height/6 + 175 && mouseY < 3*height/6 + 225) {
+    if (q2 == true && mousePressed && mouseY > 5*height/6 - 50 && mouseY < 5*height/6 + 50) {
       q3 = true;
     }
-    if (q3 == true && mousePressed && mouseY > 3*height/6 - 125 && mouseY < 3*height/6 - 75) {
+    if (q3 == true && mousePressed && mouseY > 2*height/6 - 50 && mouseY < 2*height/6 + 50) {
       q4 = true;
     }
-    if (q4 == true && mousePressed && mouseY > 3*height/6 - 25 && mouseY < 3*height/6 + 25) {
+    if (q4 == true && mousePressed && mouseY > 3*height/6 - 50 && mouseY < 3*height/6 + 50) {
       q5 = true;
     }
-    if (q5 == true && mousePressed && mouseY > 3*height/6 - 125 && mouseY < 3*height/6 - 75) {
+    if (q5 == true && mousePressed && mouseY > 2*height/6 - 50 && mouseY < 2*height/6 + 50) {
       q6 = true;
     }
-    if (q6 == true && mousePressed && mouseY > 3*height/6 - 125 && mouseY < 3*height/6 - 75) {
+    if (q6 == true && mousePressed && mouseY > 2*height/6 - 50 && mouseY < 2*height/6 + 50) {
       q7 = true;
     }
-    if (q7 == true && mousePressed && mouseY > 3*height/6 + 75 && mouseY < 3*height/6 + 125) {
+    if (q7 == true && mousePressed && mouseY > 4*height/6 - 50 && mouseY < 4*height/6 + 50) {
       q8 = true;
     }
-    if (q8 == true && mousePressed && mouseY > 3*height/6 - 125 && mouseY < 3*height/6 - 75) {
+    if (q8 == true && mousePressed && mouseY > 2*height/6 - 50 && mouseY < 2*height/6 + 50) {
       q9 = true;
     }
-    if (q9 == true && mousePressed && mouseY > 3*height/6 + 75 && mouseY < 3*height/6 + 125) {
+    if (q9 == true && mousePressed && mouseY > 4*height/6 - 50 && mouseY < 4*height/6 + 50) {
       q10 = true;
     }
-    if (q10 == true && mousePressed && mouseY > 3*height/6 - 125 && mouseY < 3*height/6 + 225) {
+    if (q10 == true && mousePressed) {
       w = true;
     }
     //These if statements shift through each question after it is answered correctly
   }
-
-
-  //This leads to the Game Over screen.
-
-  //    if (q1 == true && mousePressed && mouseY > 3*height/6 + 175 && mouseY < 3*height/6 + 225) {
-  //      l = true;
-  //    }
-  //    if (q1 == true &&
 }
-
-
-//    if (q1 == true &&
-
