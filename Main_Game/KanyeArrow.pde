@@ -115,7 +115,7 @@ class kanyearrow {
   }
 
   void scorecheck(GameOverDance G, kanyearrow W, Kanye K) {
-    if (G.score==5) {
+    if (G.score==50) {
       gameWon = true;
       
     }
