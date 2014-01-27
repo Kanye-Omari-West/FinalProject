@@ -24,7 +24,7 @@ class kanyearrow {
     oldTime = 0;
     currentTime = 0;
     timeChange = 0;
-    Life=5;
+    Life=10;
 
 
     savedTime = 0;
@@ -115,7 +115,7 @@ class kanyearrow {
   }
 
   void scorecheck(GameOverDance G, kanyearrow W, Kanye K) {
-    if (G.score==80) {
+    if (G.score==5) {
       gameWon = true;
       
     }

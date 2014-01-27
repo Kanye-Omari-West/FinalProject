@@ -110,9 +110,9 @@ class Intro extends Game {
       textSize(25);
       textAlign(CENTER);
       text("Help Kanye West on his Kanye Quest to be the Kanye Best!", width/2, height/2); 
-      text("During this Kanye Quest you will have to get Kanye Dressed, defeat some Kanye Pests, pass a Kanye Test, and rescue someone from Kanye Cardiac Arrest.", width/2, height/2 + 40);
-      text("We Kanye Suggest that you Kanye Rest before this Kanye Quest so that you can be at your Kanye Best.", width/2, height/2 + 80);
-      text("Instructions are given before each game so there is no need to Kanye Guess your Kanye Test", width/2, height/2 + 120);
+      text("During this Kanye Quest you will have to get Kanye Dressed, \nDefeat some Kanye Pests, pass a Kanye Test, and Prove you are better than all the Kanye Rest.", width/2, height/2 + 40);
+      text("We Kanye Suggest that you Kanye Rest before this Kanye Quest so that you can be at your Kanye Best.", width/2, height/2 + 120);
+      text("Instructions are given before each game so there is no need to Kanye Guess your Kanye Test", width/2, height/2 + 160);
       textSize(60);
       text("BACK", width/2, height - 80);
     }

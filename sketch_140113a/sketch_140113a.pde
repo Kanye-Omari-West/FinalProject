@@ -12,7 +12,7 @@ Minim minim;
 AudioPlayer song;
 
 boolean lose;
-int gameState = 3;
+int gameState = -1;
 
 void setup() {
   size(displayWidth, displayHeight);
