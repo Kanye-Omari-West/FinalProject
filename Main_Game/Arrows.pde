@@ -1,4 +1,6 @@
-class Arrows{
+class Arrows{ // The arrows for the ArrowGame
+
+  // Declares the variables for one arrow
   PVector loc, vel,acc;
   PImage image;
   int arrow;
