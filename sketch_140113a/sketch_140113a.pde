@@ -16,7 +16,7 @@ void draw() {
   }
 
   else if (q1.g1.gameWon) {
-    gameState += 2;
+    gameState += 1;
     q1.updateGame();
   }
 
