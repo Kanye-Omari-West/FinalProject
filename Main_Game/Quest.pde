@@ -46,7 +46,7 @@ class Quest {
       g1 = new ArrowGame();
       break;
     case 8:
-      g1 = new GameOver("Final.jpg", "You Actually Did It");
+      g1 = new GameOver("Final.jpg", "You Actually Did It - You Win");
       break;
     }
   }

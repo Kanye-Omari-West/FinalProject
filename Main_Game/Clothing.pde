@@ -35,8 +35,8 @@ class clothes { // A clothing item
   }
   void remove () {
     loc.x = random(30, width-30);
-    loc.y = 0;
-    vel.set (0, 5);
+    loc.y = -50;
+    vel.set (0, 0);
   }
 }
 

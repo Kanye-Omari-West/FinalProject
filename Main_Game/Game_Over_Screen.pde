@@ -44,7 +44,7 @@ class GameOver extends Game {
   }
 
   void Restart() {
-    gameState = -1;
+//    gameState = -1;
     q1 = new Quest(); 
     q1.updateGame();
   }
