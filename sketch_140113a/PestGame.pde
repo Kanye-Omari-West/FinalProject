@@ -15,12 +15,12 @@ class PestGame extends Game {
   }
 
   void run() {
-    if (t1.returnSeconds() >= 10) {
+    if (t1.returnSeconds() >= 20) {
       gameOver = true;
     }
     fill(0);
     textSize(50);
-    text(int(-1*(t1.returnSeconds()-10)), width/2, height/2);
+    text(int(-1*(t1.returnSeconds()-20)), width/2, height/2);
     checkPests();
     for (int i = 0; i < pests.size(); i++) {
       Pest p = pests.get(i);

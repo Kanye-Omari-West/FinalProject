@@ -1,6 +1,16 @@
+import ddf.minim.spi.*;
+import ddf.minim.signals.*;
+import ddf.minim.*;
+import ddf.minim.analysis.*;
+import ddf.minim.ugens.*;
+import ddf.minim.effects.*;
+
 Quest q1;
 Intro i;
 GameOver g;
+Minim minim;
+AudioPlayer song;
+
 boolean lose;
 int gameState = 3;
 
@@ -10,6 +20,12 @@ void setup() {
   i = new Intro();
   g = new GameOver();
   q1.updateGame();
+  
+  minim = new Minim(this);
+  song = minim.loadFile("KanyePiano.mp3");
+  song.play();
+  song.loop();
+  
 }
 
 void draw() {
@@ -31,8 +47,5 @@ void draw() {
   else {
     g.Display();
   }
-}
-
-void mousePressed() {
 }
 

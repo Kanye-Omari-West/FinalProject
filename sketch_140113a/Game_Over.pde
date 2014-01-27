@@ -47,6 +47,7 @@ class GameOver extends Game {
     gameState = -1;
     q1 = new Quest(); 
     q1.updateGame();
+    song = minim.loadFile("KanyePiano.mp3");
   }
 }
 

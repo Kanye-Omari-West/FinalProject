@@ -15,7 +15,7 @@ class Pest {
 
   void display() {
     imageMode(CENTER);
-    image(bee, location.x, location.y, 80, 60);
+    image(bee, location.x, location.y, 150, 100);
     imageMode(CORNER);
   }
 

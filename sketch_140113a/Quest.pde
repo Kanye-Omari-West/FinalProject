@@ -15,8 +15,6 @@ class Quest {
     g1.run();
   }
 
-  void runTitle() {
-  }
 
   void updateGame() {
     switch (gameState) {
@@ -51,9 +49,6 @@ class Quest {
       g1 = new GameOver("Final.jpg", "You Actually Did It");
       break;
     }
-  }
-
-  void updateTitle() {
   }
 }
 
