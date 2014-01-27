@@ -14,6 +14,7 @@ class TitleScreen extends Game{
     background(0);
     textSize(40);
     textAlign(CENTER);
+    fill(255);
     text(words, width/2, height/2);
   }
 }

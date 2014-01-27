@@ -20,6 +20,12 @@ class Quest {
 
   void updateGame() {
     switch (gameState) {
+    case -1:
+      g1 = new Intro();
+      break;
+    case 0:
+      g1 = new TitleScreen("Time for a Kanye Test");
+      break;
     case 1:
       g1 = new TestGame();
       break;

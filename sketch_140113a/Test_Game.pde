@@ -28,7 +28,8 @@ class TestGame extends Game {
     Advance();
   }
   void Display() {
-    image(Classroom, 0, 0, displayWidth, displayHeight);
+    imageMode(CENTER);
+    image(Classroom, width/2, height/2, displayWidth, displayHeight);
     rectMode(CENTER);
     fill(35, 16, 54);
     rect(width/2, height/6, 700, 100);
@@ -163,39 +164,50 @@ class TestGame extends Game {
     }
     //This assures that no two texts appear at the same time
 
-      if (i == true && mousePressed && mouseX > width/2 - 350 && mouseX < width/2 + 350 && mouseY < 3*height/6 - 300 && mouseY > 3*height/6 - 400) {
+      if (i == true && mousePressed) {
       q1 = true;
     }
     if (q1 == true && mousePressed && mouseY > 4*height/6 + - 50 && mouseY < 4*height/6 + 50) {
       q2 = true;
-    }
+    } 
+
+
     if (q2 == true && mousePressed && mouseY > 5*height/6 - 50 && mouseY < 5*height/6 + 50) {
       q3 = true;
-    }
+    } 
+
     if (q3 == true && mousePressed && mouseY > 2*height/6 - 50 && mouseY < 2*height/6 + 50) {
       q4 = true;
-    }
+    } 
+
     if (q4 == true && mousePressed && mouseY > 3*height/6 - 50 && mouseY < 3*height/6 + 50) {
       q5 = true;
-    }
+    } 
+
     if (q5 == true && mousePressed && mouseY > 2*height/6 - 50 && mouseY < 2*height/6 + 50) {
       q6 = true;
-    }
+    } 
+
     if (q6 == true && mousePressed && mouseY > 2*height/6 - 50 && mouseY < 2*height/6 + 50) {
       q7 = true;
-    }
+    } 
+
     if (q7 == true && mousePressed && mouseY > 4*height/6 - 50 && mouseY < 4*height/6 + 50) {
       q8 = true;
-    }
+    } 
+
     if (q8 == true && mousePressed && mouseY > 2*height/6 - 50 && mouseY < 2*height/6 + 50) {
       q9 = true;
-    }
+    } 
+
     if (q9 == true && mousePressed && mouseY > 4*height/6 - 50 && mouseY < 4*height/6 + 50) {
       q10 = true;
-    }
+    } 
+
     if (q10 == true && mousePressed) {
       w = true;
     }
     //These if statements shift through each question after it is answered correctly
   }
 }
+

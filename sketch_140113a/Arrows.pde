@@ -20,19 +20,19 @@ class Arrows{
     //loads arrows and sets loc for each image
     if (arrow ==1){
       image = loadImage ("left arrow.png");
-      loc.x=425;
+      loc.x=width/2-75;
     }
     if (arrow == 2) {
       image = loadImage ("down arrow.png");
-      loc.x=425+50;
+      loc.x=width/2-25;
     }
     if (arrow == 3) {
       image = loadImage("Up arrow.png");
-      loc.x=425+100;
+      loc.x=width/2+25;
     }
     if (arrow == 4) {
       image = loadImage ("Right arrow.png");
-      loc.x=425+150;
+      loc.x=width/2+75;
       
     }
   }

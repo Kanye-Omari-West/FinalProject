@@ -1,4 +1,4 @@
-class ArrowGame extends Game{
+class ArrowGame extends Game {
   kanyearrow W; 
   Kanye K;
   Keypad P;
@@ -20,8 +20,8 @@ class ArrowGame extends Game{
     W.lifecheck(G, W, K);
     W.scorecheck(G, W, K);
     W.keyboard(G, K);
+    gameOver = W.gameOver;
+    gameWon = W.gameWon;
   }
 }
-
-
 

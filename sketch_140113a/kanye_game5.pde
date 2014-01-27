@@ -10,6 +10,8 @@ class kanyearrow {
   int Life;
   boolean run;
   boolean restart;
+  boolean gameOver;
+  boolean gameWon;
 
   int savedTime;
   int totalTime;
@@ -18,17 +20,17 @@ class kanyearrow {
     for (int i = 0; i<1; i++) {
       arrow.add(new Arrows());
     }
-    Startscreen = 0;
+    Startscreen = 1;
     oldTime = 0;
     currentTime = 0;
     timeChange = 0;
     Life=5;
-   
-    
+
+
     savedTime = 0;
     totalTime = 100000;
 
-    
+
     run = true;
     restart = true;
     background = loadImage("background.jpg");
@@ -41,23 +43,11 @@ class kanyearrow {
     strokeWeight(3);
     textSize(25);
     colorMode(HSB, 360, 100, 100, 200);
-    size(background.width, background.height);
+
     background(RGB, 40, 60, 150);
     imageMode(CENTER);
-    if (Startscreen<=0) {
-      textSize(40);
-      text("Kanye West", 250, 100);
-      textSize(20);
-      text("Press Space to Start!", 250, 200);
-    }
-    //changes value so you can play
-    if (keyPressed && key == ' ')
-    {
-      Startscreen ++;
-    }
     if (Startscreen>0) {
       if (run) {
-        background(background);
         K.display();
         K.move();
         P.display();
@@ -111,22 +101,23 @@ class kanyearrow {
     if (G.score >= 60 && G.score <70) {
       K.loc.x+= random(-7.5, 7.5);
     }
-      if (G.score >=70 && G.score <80) {
-        K.loc.x+= random(-8, 8);
-      }
+    if (G.score >=70 && G.score <80) {
+      K.loc.x+= random(-8, 8);
     }
-  
+  }
+
 
 
   void lifecheck(GameOverDance G, kanyearrow W, Kanye K) {
     if (G.Life==0) {
-      G.ender(W, K);
+      gameOver = true;
     }
   }
 
   void scorecheck(GameOverDance G, kanyearrow W, Kanye K) {
     if (G.score==80) {
-      G.win(W, K);
+      gameWon = true;
+      
     }
   }
 
@@ -136,7 +127,7 @@ class kanyearrow {
     if (keyPressed) {
       if (key == CODED) {
         for (int i = arrow.size()-1; i >=0; i--) {
-          if (keyCode == LEFT && arrow.get(i).loc.y > 650 && arrow.get(i).loc.y <750 && arrow.get(i).loc.x == 425) {
+          if (keyCode == LEFT && arrow.get(i).loc.y > 650 && arrow.get(i).loc.y <750 && arrow.get(i).loc.x == width/2-75) {
             G.score++;
             K.d=K.d+5;
             arrow.remove(i);
@@ -144,21 +135,21 @@ class kanyearrow {
         }
       }
       for (int i = arrow.size()-1; i >=0; i--) {
-        if (keyCode == DOWN && arrow.get(i).loc.y > 650 && arrow.get(i).loc.y <750 && arrow.get(i).loc.x == 475) {
+        if (keyCode == DOWN && arrow.get(i).loc.y > 650 && arrow.get(i).loc.y <750 && arrow.get(i).loc.x == width/2-25) {
           G.score++;
           K.d=K.d+5;
           arrow.remove(i);
         }
       }
       for (int i = arrow.size()-1; i >=0; i--) {
-        if (keyCode == UP && arrow.get(i).loc.y > 650 && arrow.get(i).loc.y <750 && arrow.get(i).loc.x == 525) {
+        if (keyCode == UP && arrow.get(i).loc.y > 650 && arrow.get(i).loc.y <750 && arrow.get(i).loc.x == width/2+25) {
           G.score++;
           K.d=K.d+5;
           arrow.remove(i);
         }
       }
       for (int i = arrow.size()-1; i >=0; i--) {
-        if (keyCode == RIGHT && arrow.get(i).loc.y > 650 && arrow.get(i).loc.y <750 && arrow.get(i).loc.x == 575) {
+        if (keyCode == RIGHT && arrow.get(i).loc.y > 650 && arrow.get(i).loc.y <750 && arrow.get(i).loc.x == width/2+75) {
           G.score++;
           K.d=K.d+5;
           arrow.remove(i);

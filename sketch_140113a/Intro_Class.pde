@@ -1,4 +1,4 @@
-class Intro {
+class Intro extends Game {
   PImage Kanye, KanyeFlip, Title, Dropout, Graduation, Heartbreak, LR, Yeezus, MBDTF, Bear, Bear2, KI;
   PVector loc1, loc2, loc3, loc4, loc5, loc6, vel;
   int w, l, d;
@@ -17,17 +17,23 @@ class Intro {
     Yeezus = loadImage("Yeezus.jpg");
     Bear = loadImage("Kanye Bear.png");
     Bear2 = loadImage("Bear Flip.png");
-    loc1 = new PVector(150, height/2 + 750);
-    loc2 = new PVector(400, height/2 + 750);
-    loc3 = new PVector(650, height/2 + 750);
-    loc4 = new PVector(900, height/2 + 750);
-    loc5 = new PVector(1150, height/2 + 750);
-    loc6 = new PVector(1350, height/2 + 750);
+    loc1 = new PVector(width/6, 32*height/36);
+    loc2 = new PVector(2*width/6, 32*height/36);
+    loc3 = new PVector(3*width/6, 32*height/36);
+    loc4 = new PVector(4*width/6, 32*height/36);
+    loc5 = new PVector(5*width/6, 32*height/36);
+    loc6 = new PVector(6*width/6, 32*height/36);
     vel = new PVector(0, 0);
     d = 100;
     w = 400;
     l = 450;
     in = false;
+  }
+
+  void run() {
+    Display();
+    Albums();
+    Instructions();
   }
 
   void Display() {
@@ -112,6 +118,9 @@ class Intro {
     }
     if (in == true && mousePressed && mouseX > width/2 - 150 && mouseX < width/2 + 150 && mouseY > height - 150 && mouseY < height - 50) {
       in = false;
+    }
+    if (in == false && mousePressed && mouseX <  450 && mouseX > 200 && mouseY > height/2 - 200 && mouseY < height/2 - 100) {
+      gameWon = true;
     }
   }
 }

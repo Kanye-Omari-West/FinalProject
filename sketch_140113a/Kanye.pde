@@ -6,7 +6,7 @@ class Kanye {
   PImage image;
 
   Kanye() {
-    loc = new PVector(500, 450);
+    loc = new PVector(width/2, height/2);
     d = 33;
     image = loadImage("kanye.png");
     moveSpeed = 5;

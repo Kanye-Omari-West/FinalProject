@@ -17,7 +17,7 @@ class dressKanye extends Game {
   }
 
   void run() {
-    
+
     fill(0);
     textSize(100);
     text("Score:" + undy.score, 120, 100);
@@ -30,6 +30,10 @@ class dressKanye extends Game {
     if (millis()- oldTime >= 1000) {
       index++;
       oldTime = millis();
+    }
+
+    if (undy.score >= 15) {
+      gameWon = true;
     }
   }
 }

@@ -8,7 +8,7 @@ class Keypad {
   Keypad () {
     imageMode(CENTER);
     ddr = loadImage("ddr.png");
-    loc = new PVector (500,y);
+    loc = new PVector (width/2,y);
     
   }
   
