@@ -8,8 +8,8 @@ class clothes {
     d = 60;
     choice = int(random(1, 5));
     loc = new PVector (random(1, width), 0);
-    vel = new PVector (0, 1);
-    acc = new PVector (0, 0.1);
+    vel = new PVector (0, 5);
+    
     if (choice == 1) {
       image = loadImage ("shirt.png");
     }
@@ -28,12 +28,13 @@ class clothes {
     image(image, loc.x, loc.y, d, d);
   }
   void move() {
-    vel.add(acc);
+    
     loc.add(vel);
   }
   void remove () {
-    loc.y = 2*height;
-    vel.set (0, 0);
+    loc.x = random(30, width-30);
+    loc.y = 0;
+    vel.set (0, 5);
   }
 }
 

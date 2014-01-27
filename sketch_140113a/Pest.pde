@@ -8,14 +8,14 @@ class Pest {
 
   Pest() {
     location = new PVector(random(30, width-30), random(30, height-30));
-    velocity = new PVector(random(-7, 7), random(-7, 7));
+    velocity = new PVector(random(-15, 15), random(-15, 15));
 
     bee = loadImage("kanye pest.png");
   }
 
   void display() {
     imageMode(CENTER);
-    image(bee, location.x, location.y, 40, 30);
+    image(bee, location.x, location.y, 80, 60);
     imageMode(CORNER);
   }
 

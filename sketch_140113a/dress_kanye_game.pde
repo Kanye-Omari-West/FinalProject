@@ -17,10 +17,10 @@ class dressKanye extends Game {
   }
 
   void run() {
-
+    gameOver = undy.gameOver;
     fill(0);
     textSize(100);
-    text("Score:" + undy.score, 120, 100);
+    text("Score:" + undy.score, 200, 100);
     undy.display();
     for (int i = 0; i<index; i++) {
       clo[i].display();

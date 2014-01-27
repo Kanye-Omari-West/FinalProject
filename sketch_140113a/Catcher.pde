@@ -4,6 +4,7 @@ class catcher {
   int y;
   int d;
   int w,h;
+  boolean gameOver;
 
   catcher() {
     imageMode(CENTER);
@@ -21,6 +22,9 @@ class catcher {
     if (dist(mouseX, y, fall.loc.x, fall.loc.y) < h/2 + fall.d/2) {
       fall.remove();
       score+=1;
+    }
+    if(fall.loc.y >= height){
+       gameOver = true; 
     }
   }
 }

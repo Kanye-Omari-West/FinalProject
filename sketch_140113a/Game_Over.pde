@@ -1,13 +1,24 @@
-class GameOver {
+class GameOver extends Game {
 
   PImage KS;
   PVector loc;
   boolean t;
   int d = 30;
+  String words;
 
   GameOver() {
     KS = loadImage("Kanye and Sway.png");
     loc = new PVector(width/2, -100);
+    words = "GAME OVER";
+  }
+  GameOver(String s, String w) {
+
+    KS = loadImage(s);
+    loc = new PVector(width/2, -100);
+    words = w;
+  }
+  void run() {
+    Display();
   }
 
   void Display() {
@@ -19,7 +30,7 @@ class GameOver {
       fill(255, 0, 0);
       textAlign(CENTER);
       textSize(100);
-      text("GAME OVER", loc.x, loc.y);
+      text(words, loc.x, loc.y);
       loc.y+=10;
     }
     if (loc.y >= height/6) {
@@ -27,7 +38,6 @@ class GameOver {
       noLoop();
       textSize(40);
       rectMode(CENTER);
-      
     }
   }
 }

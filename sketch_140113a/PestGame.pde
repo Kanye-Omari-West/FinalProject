@@ -2,6 +2,7 @@ class PestGame extends Game {
 
   ArrayList<Pest> pests;
   Swatter s1;
+  Timer t1;
 
   PestGame() {
     pests = new ArrayList<Pest>();
@@ -10,9 +11,16 @@ class PestGame extends Game {
       pests.add(new Pest());
     }
     s1 = new Swatter();
+    t1 = new Timer();
   }
 
   void run() {
+    if (t1.returnSeconds() >= 5) {
+      gameOver = true;
+    }
+    fill(0);
+    textSize(50);
+    text(int(-1*(t1.returnSeconds()-5)), width/2, height/2);
     checkPests();
     for (int i = 0; i < pests.size(); i++) {
       Pest p = pests.get(i);
