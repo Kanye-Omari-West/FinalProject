@@ -19,6 +19,7 @@ class GameOver extends Game {
   }
   void run() {
     Display();
+    Restart();
   }
 
   void Display() {
@@ -34,11 +35,18 @@ class GameOver extends Game {
       loc.y+=10;
     }
     if (loc.y >= height/6) {
-      loc.y = height/2;
-      noLoop();
+      loc.y = height/6;
+      fill(255);
+      text("Click to restart", width/2, 34*height/36);
       textSize(40);
       rectMode(CENTER);
     }
+  }
+
+  void Restart() {
+    gameState = -1;
+    q1 = new Quest(); 
+    q1.updateGame();
   }
 }
 

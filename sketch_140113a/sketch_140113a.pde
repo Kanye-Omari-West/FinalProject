@@ -2,7 +2,7 @@ Quest q1;
 Intro i;
 GameOver g;
 boolean lose;
-int gameState = -1;
+int gameState = 3;
 
 void setup() {
   size(displayWidth, displayHeight);
@@ -15,7 +15,7 @@ void setup() {
 void draw() {
   background(255);
   lose = q1.g1.gameOver;
-  println(lose);
+
   if (!lose) {
     if (q1.g1.gameWon) {
       gameState += 1;
@@ -25,8 +25,14 @@ void draw() {
       q1.runGame();
     }
   } 
+  else if (lose && mousePressed) {
+    g.Restart();
+  }
   else {
     g.Display();
   }
+}
+
+void mousePressed() {
 }
 

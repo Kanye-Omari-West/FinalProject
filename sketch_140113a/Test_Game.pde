@@ -171,7 +171,6 @@ class TestGame extends Game {
       q2 = true;
     } 
 
-
     if (q2 == true && mousePressed && mouseY > 5*height/6 - 50 && mouseY < 5*height/6 + 50) {
       q3 = true;
     } 

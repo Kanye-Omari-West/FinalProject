@@ -32,7 +32,7 @@ class dressKanye extends Game {
       oldTime = millis();
     }
 
-    if (undy.score >= 15) {
+    if (undy.score >= 25) {
       gameWon = true;
     }
   }
