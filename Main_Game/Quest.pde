@@ -1,13 +1,12 @@
-class Quest {
+class Quest { // The big class that runs all of the minigames
 
-  Game g1;
+  Game g1; // The game variable that is updates with the minigames or titlescreens, which all inherit the game class. By using polymorphism, the complexity of governing switching games is greatly decreased.
 
-  Intro i;
+  Intro i; // Intro screen
   GameOver g;
 
 
   Quest() {
-    i = new Intro();
     g1 = new Game();
   }
 
@@ -17,6 +16,7 @@ class Quest {
 
 
   void updateGame() {
+    //Using a switch block in a method gives us a lot of flexibility in the game. To debug, all you have to do is change gameState to a different number. This removes the need for complex if statements
     switch (gameState) {
     case -1:
       g1 = new Intro();

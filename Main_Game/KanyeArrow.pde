@@ -1,8 +1,7 @@
-class kanyearrow {
-  ArrayList<Arrows> arrow = new ArrayList<Arrows>();
+class kanyearrow { //Class for the arrow game
+  ArrayList<Arrows> arrow = new ArrayList<Arrows>(); //An arraylist of the arrows that fall down the screen
   int Startscreen;
-  int oldTime;
-  int currentTime;
+
   int timeChange;
 
   PImage background;
@@ -12,28 +11,22 @@ class kanyearrow {
   boolean restart;
   boolean gameOver;
   boolean gameWon;
-
+  
   int savedTime;
-  int totalTime;
+
 
   kanyearrow () {
     for (int i = 0; i<1; i++) {
-      arrow.add(new Arrows());
+      arrow.add(new Arrows()); // Adds one arrow to the arraylist
     }
     Startscreen = 1;
-    oldTime = 0;
-    currentTime = 0;
+
     timeChange = 0;
     Life=10;
 
 
-    savedTime = 0;
-    totalTime = 100000;
-
-
     run = true;
     restart = true;
-    background = loadImage("background.jpg");
   }
 
   void display(Kanye K, Keypad P, GameOverDance G) {
@@ -52,11 +45,11 @@ class kanyearrow {
         K.move();
         P.display();
 
-        if (frameCount%25 == 0) {
+        if (frameCount%25 == 0) { //Adds a new arrow to the arraylist every 25 frames
           arrow.add(new Arrows());
         }
 
-        for (int i = arrow.size()-1; i >=0; i--) {
+        for (int i = arrow.size()-1; i >=0; i--) { // This for loop gets the arrows in the ArrayList and checks if they have gone too far off the screen
           Arrows b = arrow.get(i);
           b.move();
           b.display();
@@ -78,7 +71,7 @@ class kanyearrow {
     }
   }
 
-  void headvibrate(GameOverDance G, Kanye K) {
+  void headvibrate(GameOverDance G, Kanye K) { // The function that moves the head around. The bigger kanye gets, the more the head moves around
 
     if (G.score < 10) {
       K.loc.x+=random(-.5, .5);
@@ -108,13 +101,13 @@ class kanyearrow {
 
 
 
-  void lifecheck(GameOverDance G, kanyearrow W, Kanye K) {
+  void lifecheck(GameOverDance G, kanyearrow W, Kanye K) { // Checks if the player's life has ran out
     if (G.Life==0) {
       gameOver = true;
     }
   }
 
-  void scorecheck(GameOverDance G, kanyearrow W, Kanye K) {
+  void scorecheck(GameOverDance G, kanyearrow W, Kanye K) { // Checks if the goal number of arrows have been reached
     if (G.score==50) {
       gameWon = true;
       
@@ -123,7 +116,7 @@ class kanyearrow {
 
 
 
-  void keyboard(GameOverDance G, Kanye K) {
+  void keyboard(GameOverDance G, Kanye K) { // This method governs all the keyboard actions of the game. All four arrow keys are checked in this function
     if (keyPressed) {
       if (key == CODED) {
         for (int i = arrow.size()-1; i >=0; i--) {

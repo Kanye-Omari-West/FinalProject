@@ -1,4 +1,4 @@
-class Keypad {
+class Keypad { // The ddr pad that is displayed at the bottom of the screen
   PImage ddr;
   PVector loc;
   int x;

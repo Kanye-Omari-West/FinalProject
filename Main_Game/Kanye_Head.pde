@@ -1,4 +1,6 @@
-class Kanye {
+class Kanye { // The head that moves around in the arrow game
+
+  // All variables that are used to create the moving image
   PVector loc; 
   float d;
   PVector move;
@@ -20,7 +22,7 @@ class Kanye {
     image(image, loc.x, loc.y, d, d);
   }
 
-  void move() {
+  void move() { 
     loc.x = constrain(loc.x, 0, width);
     loc.y = constrain(loc.y, 0, height);
    

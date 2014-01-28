@@ -23,7 +23,7 @@ Minim minim; // Needed to use sound in the game
 AudioPlayer song; // The song file is loaded by the player
 
 boolean lose; // Runs true if the game is lose, used to govern the end screen
-int gameState = -1; // This number tells the quest which game to load and play
+int gameState = 1; // This number tells the quest which game to load and play
 
 void setup() {
   size(displayWidth, displayHeight); // Allows for easy scaling of the game (to be implemented at another time)

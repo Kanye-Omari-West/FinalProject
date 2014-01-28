@@ -1,4 +1,4 @@
-class Intro extends Game {
+class Intro extends Game { // The impressive main menu of the game that intices the user into the game
   PImage Kanye, KanyeFlip, Title, Dropout, Graduation, Heartbreak, LR, Yeezus, MBDTF, Bear, Bear2, KI;
   PVector loc1, loc2, loc3, loc4, loc5, loc6, vel;
   int w, l, d;
@@ -17,6 +17,8 @@ class Intro extends Game {
     Yeezus = loadImage("Yeezus.jpg");
     Bear = loadImage("Kanye Bear.png");
     Bear2 = loadImage("Bear Flip.png");
+    
+    // Because the albums move around the screen they need a velocity and location
     loc1 = new PVector(width/6, 32*height/36);
     loc2 = new PVector(2*width/6, 32*height/36);
     loc3 = new PVector(3*width/6, 32*height/36);
@@ -30,6 +32,7 @@ class Intro extends Game {
     in = false;
   }
 
+//The method called by the main program
   void run() {
     Display();
     Albums();
@@ -54,12 +57,10 @@ class Intro extends Game {
       fill(168, 163, 12);
       text("Start", 325, height/2 - 140);
       text("Instructions", width - 325, height/2 - 140);
-      //If the Start button is pressed, then the first game should begin.
-      //If the Instructions button is pressed, then the Instructions Class should be displayed.
     }
   }
 
-  void Albums() {
+  void Albums() { // The method that makes the albums move across the screen and restart when they reach the end
     if (in == false) {
       image(Dropout, loc1.x, loc1.y, d, d);
       image(LR, loc2.x, loc2.y, d, d);
@@ -67,12 +68,15 @@ class Intro extends Game {
       image(Heartbreak, loc4.x, loc4.y, d, d);
       image(MBDTF, loc5.x, loc5.y, d, d);
       image(Yeezus, loc6.x, loc6.y, d, d);
+      //Increasing the location of the albums
       loc1.x+=2;
       loc2.x+=2;
       loc3.x+=2;
       loc4.x+=2;
       loc5.x+=2;
       loc6.x+=2;
+      
+      //Determines the resetting of the albums x location
       if (loc1.x + d/2 > width) {
         loc1.x = 0;
       }
@@ -94,11 +98,12 @@ class Intro extends Game {
     }
   }
 
+// The method for the instruction screen
   void Instructions() {
-    if (in == false && mousePressed && mouseX > width - 450 && mouseX < width - 200 && mouseY > height/2 - 200 && mouseY < height/2 - 100) {
+    if (in == false && mousePressed && mouseX > width - 450 && mouseX < width - 200 && mouseY > height/2 - 200 && mouseY < height/2 - 100) { //if the mouse is pressed on the button this happens
       in = true;
     }
-    if (in == true) {
+    if (in == true) { // Will be true when the mouse is pressed over the button
       background(35, 16, 54);
       imageMode(CENTER);
       image(KI, width/2, height/2 - 200, 400, 300);
@@ -116,11 +121,11 @@ class Intro extends Game {
       textSize(60);
       text("BACK", width/2, height - 80);
     }
-    if (in == true && mousePressed && mouseX > width/2 - 150 && mouseX < width/2 + 150 && mouseY > height - 150 && mouseY < height - 50) {
+    if (in == true && mousePressed && mouseX > width/2 - 150 && mouseX < width/2 + 150 && mouseY > height - 150 && mouseY < height - 50) { // Will be true when the back button is pressed
       in = false;
     }
-    if (in == false && mousePressed && mouseX <  450 && mouseX > 200 && mouseY > height/2 - 200 && mouseY < height/2 - 100) {
-      gameWon = true;
+    if (in == false && mousePressed && mouseX <  450 && mouseX > 200 && mouseY > height/2 - 200 && mouseY < height/2 - 100) { // The start button
+      gameWon = true; // Tells the game you are ready to move on to the next Game
     }
   }
 }

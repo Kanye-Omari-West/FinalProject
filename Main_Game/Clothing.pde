@@ -33,9 +33,9 @@ class clothes { // A clothing item
     
     loc.add(vel);
   }
-  void remove () {
+  void remove () { // Sets the location of the clothing item to a spot above the display
     loc.x = random(30, width-30);
-    loc.y = -50;
+    loc.y = -50; // Because the game is so fast paced, there is no need to remove the item.
     vel.set (0, 0);
   }
 }

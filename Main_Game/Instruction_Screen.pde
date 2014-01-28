@@ -1,10 +1,10 @@
-class TitleScreen extends Game{
+class TitleScreen extends Game{ // The screens between the games that display text and instructions
   String words;
   Timer t1;
 
   TitleScreen(String _s) {
     words = _s;
-    t1 = new Timer();
+    t1 = new Timer(); // Makes the screen go away after a certain amount of time
   }
 
   void run() {

@@ -1,6 +1,6 @@
-class TestGame extends Game {
+class TestGame extends Game { // The test game
 
-  GameOver g;
+  
   PImage Classroom;
   boolean q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, w, i, l;
 
@@ -45,7 +45,7 @@ class TestGame extends Game {
   void Questions() {
     textMode(CENTER);
     textSize(30);
-    if (q1 == true) {
+    if (q1 == true) { // The following blocks display the text for the game. Yes this could have been done a lot simpler and a lot easier with a Questions class, but nobody had time for dat.
       text("Which celebrity did Kanye interrupt?", width/2, height/6);
       text("Jay-Z", width/2, 2*height/6);
       text("Beyonce", width/2, 3*height/6);
@@ -116,15 +116,13 @@ class TestGame extends Game {
       text("Kanye", width/2, 5*height/6);
     }
     if (w == true) {
-      text("CONGRATULATIONS! You passed!", width/2, height/6);
-      gameWon = true;
+      gameWon = true; // Makes you move on to the next game
     }
-    //After w = true, the next game should start
   }
 
-  void Advance() {
+  void Advance() { // This makes sure no two games are running at the same time
     if (i == true) {
-      text("Help Kanye West with his Kanye Test!", width/2, height/6);
+      text("Help Kanye West with his Kanye Test!\nClick to Start", width/2, height/6-10);
     }
     if (q1 == true || q2 == true || q3 == true || q4 == true || q5 == true || q6 == true || q7 == true || q8 == true || q9 == true || q10 == true || w == true) {
       i = false;
@@ -164,7 +162,9 @@ class TestGame extends Game {
     }
     //This assures that no two texts appear at the same time
 
-      if (i == true && mousePressed) {
+      if (i == true && mousePressed) { 
+// If the mouse is pressed within the right boundary then the question is correct. The major bug that we found was that we could not get a way to check for a wrong click without breaking the entire game or causing more headache
+//And thats not very nice.
       q1 = true;
     }
     if (q1 == true && mousePressed && mouseY > 4*height/6 + - 50 && mouseY < 4*height/6 + 50) {

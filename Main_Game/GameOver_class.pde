@@ -19,7 +19,6 @@ class GameOverDance {
     W.arrow.clear();
     //Sets certain background.
     background(125, 200, 255);
-    //If the 'r' key is pressed this will restart the game.
   }
 }
 
