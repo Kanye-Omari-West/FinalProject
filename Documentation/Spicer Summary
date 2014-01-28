@@ -1,4 +1,4 @@
-Summary
+One Page Summary
 	
 	My role on the group was that of the User Interface manager. To begin, I created the intro screen as well as the game over screen. The first function in the class is “void Display,” which displays the title, picture of Kanye West’s Head, and the picture of the two bears on his side. Next is the “void Albums” function which displays the six albums moving on the bottom of the screen, and finally the “void Instructions” function which leads to another screen displaying brief instructions for the game. Afterwards, I created the “Game Over” class, which consists of a “void Display” function that displays a picture of Kanye West and Sway Calloway. The class also includes a text box with text in it saying Game Over, as well as an option to restart the game. If the restart button is pressed, the game reverts back to the intro.
 	
